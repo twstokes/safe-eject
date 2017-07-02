@@ -16,7 +16,7 @@ class ViewController: NSViewController {
     let diskHandler = DiskHandler()
     
     @IBAction func ejectPressed(_ sender: NSButton) {
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.main.async {
             do {
                 try self.diskHandler?.ejectAllVolumes()
                 debugPrint("All drives were ejected successfully")
@@ -58,9 +58,9 @@ class ViewController: NSViewController {
     
     func updateUiState(safe: Bool) {
         if safe {
-            statusLabel.stringValue = "Safe to eject."
+            statusLabel.stringValue = "Safe to disconnect."
         } else {
-            statusLabel.stringValue = "Unsafe to eject."
+            statusLabel.stringValue = "Unsafe to disconnect."
         }
     }
 
