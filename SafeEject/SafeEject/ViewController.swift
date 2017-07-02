@@ -12,10 +12,14 @@ import Cocoa
 class ViewController: NSViewController {
     
     @IBOutlet weak var statusLabel: NSTextField!
+    @IBOutlet weak var progressSpinner: NSProgressIndicator!
+    
     var timer = Timer()
     let diskHandler = DiskHandler()
     
     @IBAction func ejectPressed(_ sender: NSButton) {
+        updateState(to: .working)
+        
         DispatchQueue.main.async {
             do {
                 try self.diskHandler?.ejectAllVolumes()
@@ -30,6 +34,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateState(to: .working)
         
         // register our volume refresh observer
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.fireVolumeTimer), name: NSNotification.Name("com.tannr.volumeRefresh"), object: nil)
@@ -50,17 +55,22 @@ class ViewController: NSViewController {
     
     func refreshVolumeStatus() {
         if let volumeCount = diskHandler?.getMountedVolumes().count, volumeCount == 0 {
-            updateUiState(safe: true)
+            updateState(to: .safe)
         } else {
-            updateUiState(safe: false)
+            updateState(to: .unsafe)
         }
     }
     
-    func updateUiState(safe: Bool) {
-        if safe {
+    func updateState(to: EjectionState) {
+        switch to {
+        case .safe:
+            progressSpinner.stopAnimation(nil)
             statusLabel.stringValue = "Safe to disconnect."
-        } else {
+        case .unsafe:
+            progressSpinner.stopAnimation(nil)
             statusLabel.stringValue = "Unsafe to disconnect."
+        case .working:
+            progressSpinner.startAnimation(nil)
         }
     }
 
@@ -71,6 +81,7 @@ class ViewController: NSViewController {
     }
     
     func fireVolumeTimer(_ notification: Notification) {
+        updateState(to: .working)
         debugPrint("Firing off volume timer!")
         
         if let status = notification.object as? DiskStatus {
@@ -79,7 +90,7 @@ class ViewController: NSViewController {
             switch status {
             case .arrive:
                 // when any arrival event occurred, it's an unsafe state
-                updateUiState(safe: false)
+                updateState(to: .unsafe)
             case .leave:
                 // because the timer can be called multiple times in a row, invalidate it each time
                 timer.invalidate()
@@ -87,5 +98,11 @@ class ViewController: NSViewController {
             }
         }
     }
+}
+
+enum EjectionState {
+    case safe
+    case unsafe
+    case working
 }
 
