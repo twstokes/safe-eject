@@ -10,4 +10,7 @@
 * Green (safe)
 * Red (unsafe)
 * Pulsating (working)
-	
+
+#### Todo:
+
+* Clean up multiple calls about the same volume (includes slices)
