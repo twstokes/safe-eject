@@ -16,8 +16,13 @@ class ViewController: NSViewController {
     
     var timer = Timer()
     let diskHandler = DiskHandler()
+    let arduinoHandler = ArduinoHandler()
     
     @IBAction func ejectPressed(_ sender: NSButton) {
+        ejectAll()
+    }
+    
+    func ejectAll() {
         updateState(to: .working)
         
         DispatchQueue.main.async {
@@ -36,6 +41,14 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         updateState(to: .working)
         
+        arduinoHandler.registerEjectCallback {
+            self.ejectAll()
+        }
+        
+        // refreshVolumeStatus is finishing before this is ready, so initial state is never set
+        arduinoHandler.open(path: "/dev/cu.usbmodem1431321")
+        
+        
         // register our volume refresh observer
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.fireVolumeTimer), name: NSNotification.Name("com.tannr.volumeRefresh"), object: nil)
         
@@ -53,6 +66,10 @@ class ViewController: NSViewController {
         refreshVolumeStatus()
     }
     
+    override func viewWillDisappear() {
+        arduinoHandler.close()
+    }
+    
     func refreshVolumeStatus() {
         if let volumeCount = diskHandler?.getMountedVolumes().count, volumeCount == 0 {
             updateState(to: .safe)
@@ -66,11 +83,14 @@ class ViewController: NSViewController {
         case .safe:
             progressSpinner.stopAnimation(nil)
             statusLabel.stringValue = "Safe to disconnect."
+            arduinoHandler.sendData(data: "1".data(using: String.Encoding.utf8)!)
         case .unsafe:
             progressSpinner.stopAnimation(nil)
             statusLabel.stringValue = "Unsafe to disconnect."
+            arduinoHandler.sendData(data: "0".data(using: String.Encoding.utf8)!)
         case .working:
             progressSpinner.startAnimation(nil)
+            arduinoHandler.sendData(data: "2".data(using: String.Encoding.utf8)!)
         }
     }
 
