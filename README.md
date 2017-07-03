@@ -14,3 +14,4 @@
 #### Todo:
 
 * Clean up multiple calls about the same volume (includes slices)
+* Convert to Menu Bar app
