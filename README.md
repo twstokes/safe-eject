@@ -1,3 +1,5 @@
+## Current status: Hack
+
 #### Ideas:  
 
 * Option to ignore certain drives
