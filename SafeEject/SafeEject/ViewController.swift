@@ -46,7 +46,7 @@ class ViewController: NSViewController {
         }
         
         // refreshVolumeStatus is finishing before this is ready, so initial state is never set
-        arduinoHandler.open(path: "/dev/cu.usbmodem1431321")
+        arduinoHandler.open(path: "/dev/cu.usbmodem1431311")
         
         
         // register our volume refresh observer
@@ -90,7 +90,7 @@ class ViewController: NSViewController {
             arduinoHandler.sendData(data: "0".data(using: String.Encoding.utf8)!)
         case .working:
             progressSpinner.startAnimation(nil)
-            arduinoHandler.sendData(data: "2".data(using: String.Encoding.utf8)!)
+//            arduinoHandler.sendData(data: "2".data(using: String.Encoding.utf8)!)
         }
     }
 
@@ -101,7 +101,7 @@ class ViewController: NSViewController {
     }
     
     func fireVolumeTimer(_ notification: Notification) {
-        updateState(to: .working)
+//        updateState(to: .working)
         debugPrint("Firing off volume timer!")
         
         if let status = notification.object as? DiskStatus {
