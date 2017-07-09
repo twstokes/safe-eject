@@ -1,17 +1,16 @@
 ## Current status: Hack
 
-#### Ideas:  
+![pressing button to eject](https://github.com/twstokes/safe-eject/blob/master/media/SafeEject.gif)
 
-* Option to ignore certain drives
-* Needs to be button, not a switch
-* Color determines if it's safe to eject or not
-* Pulsates when trying to eject devices
+### Objective:
 
-#### Arduino really only needs three states:
+Provide a convenient way to eject mounted volumes from a Mac. Useful for "undocking" a Mac laptop.
 
-* Green (safe)
-* Red (unsafe)
-* Pulsating (working)
+### Hardware:
+
+* Arduino
+* Adafruit RGB pushbutton: https://www.adafruit.com/product/3350
+* Pull-down resistor for button presses
 
 #### Todo:
 
