@@ -9,6 +9,8 @@
 int buttonVal = LOW;
 int state = UNSAFE;
 
+// Note: RGB button works in reverse state, e.g.: LOW == On
+
 void setup() {
 	Serial.begin(9600);
 	pinMode(BUTTON, INPUT);
@@ -22,7 +24,11 @@ void loop() {
 	// data waiting
 	if (Serial.available() > 0) {
 		int newState = Serial.read();
-		setState(newState);
+
+		// only set if necessary
+		if (newState != state) {
+			setState(newState);
+		}
 	}
 
 	if (state == WORKING) {
@@ -34,20 +40,23 @@ void loop() {
 	if (buttonVal == HIGH) {
 		Serial.write("eject");
 		setState(WORKING);
+		// debounce
+		delay(200);
 	}
 }
 
 void setState(int newState) {
 	if (newState == UNSAFE) {
+		// Green off
+		digitalWrite(GREEN_LED, HIGH);
+		// Red on
+		digitalWrite(RED_LED, LOW);
+	} else if(newState == SAFE) {
 		digitalWrite(GREEN_LED, LOW);
 		digitalWrite(RED_LED, HIGH);
-	} else if(newState == SAFE) {
+	} else if(newState == WORKING) {
 		digitalWrite(GREEN_LED, HIGH);
 		digitalWrite(RED_LED, LOW);
-	} else if(newState == WORKING) {
-		digitalWrite(GREEN_LED, LOW);
-		digitalWrite(RED_LED, LOW);
-		pulse();
 	} else {
 		// invalid state passed
 		newState = UNSAFE;
@@ -57,23 +66,19 @@ void setState(int newState) {
 }
 
 void pulse() {
-  // fade in from min to max in increments of 5 points:
+   // fade out from max to min in increments of 5 points:
   for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
     // sets the value (range from 0 to 255):
     analogWrite(RED_LED, fadeValue);
     // wait for 30 milliseconds to see the dimming effect
     delay(10);
-    // cut things short if there's a potential state change
-    if (Serial.available() > 0) return;
   }
 
-  // fade out from max to min in increments of 5 points:
+  // fade in from min to max in increments of 5 points:
   for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 5) {
     // sets the value (range from 0 to 255):
     analogWrite(RED_LED, fadeValue);
     // wait for 30 milliseconds to see the dimming effect
     delay(10);
-    // cut things short if there's a potential state change
-    if (Serial.available() > 0) return;
   }
 }
