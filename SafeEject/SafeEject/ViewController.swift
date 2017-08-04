@@ -46,7 +46,7 @@ class ViewController: NSViewController {
         }
         
         // refreshVolumeStatus is finishing before this is ready, so initial state is never set
-        arduinoHandler.open(path: "/dev/cu.usbmodem1431311")
+        arduinoHandler.open(path: "/dev/cu.usbmodem1431441")
         
         
         // register our volume refresh observer
