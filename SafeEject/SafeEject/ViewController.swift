@@ -8,23 +8,22 @@
 
 import Cocoa
 
-
 class ViewController: NSViewController {
-    
+
     @IBOutlet weak var statusLabel: NSTextField!
     @IBOutlet weak var progressSpinner: NSProgressIndicator!
-    
+
     var timer = Timer()
     let diskHandler = DiskHandler()
     let arduinoHandler = ArduinoHandler()
-    
+
     @IBAction func ejectPressed(_ sender: NSButton) {
         ejectAll()
     }
-    
+
     func ejectAll() {
-        updateState(to: .working)
-        
+        updateStateTo(.working)
+
         DispatchQueue.main.async {
             do {
                 try self.diskHandler?.ejectAllVolumes()
@@ -36,51 +35,61 @@ class ViewController: NSViewController {
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateState(to: .working)
-        
+        updateStateTo(.working)
+
         arduinoHandler.registerEjectCallback {
-//            self.ejectAll()
+            //            self.ejectAll()
             debugPrint("Arduino message received!")
         }
-        
+
         // refreshVolumeStatus is finishing before this is ready, so initial state is never set
         arduinoHandler.open(path: "/dev/cu.usbmodem1431441")
-        
-        
+
         // register our volume refresh observer
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.fireVolumeTimer), name: NSNotification.Name("com.tannr.volumeRefresh"), object: nil)
-        
-        diskHandler?.registerVolumeMounted({ disk, keys, context in
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(ViewController.fireVolumeTimer),
+            name: NSNotification.Name("com.tannr.volumeRefresh"),
+            object: nil
+        )
+
+        diskHandler?.registerVolumeMounted({ _, _, _ in
             debugPrint("Volume mounted")
-            NotificationCenter.default.post(name: Notification.Name("com.tannr.volumeRefresh"), object: DiskStatus.arrive)
+            NotificationCenter.default.post(
+                name: Notification.Name("com.tannr.volumeRefresh"),
+                object: DiskStatus.arrive
+            )
         })
-        
-        diskHandler?.registerDiskDisappeared({ disk, context in
+
+        diskHandler?.registerDiskDisappeared({ _, _ in
             debugPrint("Disk disappeared")
-            NotificationCenter.default.post(name: Notification.Name("com.tannr.volumeRefresh"), object: DiskStatus.leave)
+            NotificationCenter.default.post(
+                name: Notification.Name("com.tannr.volumeRefresh"),
+                object: DiskStatus.leave
+            )
         })
-        
+
         // set our initial UI state
         refreshVolumeStatus()
     }
-    
+
     override func viewWillDisappear() {
         arduinoHandler.close()
     }
-    
+
     @objc func refreshVolumeStatus() {
         if let volumeCount = diskHandler?.getMountedVolumes().count, volumeCount == 0 {
-            updateState(to: .safe)
+            updateStateTo(.safe)
         } else {
-            updateState(to: .unsafe)
+            updateStateTo(.unsafe)
         }
     }
-    
-    func updateState(to: EjectionState) {
-        switch to {
+
+    func updateStateTo(_ newState: EjectionState) {
+        switch newState {
         case .safe:
             progressSpinner.stopAnimation(nil)
             statusLabel.stringValue = "Safe to disconnect."
@@ -91,31 +100,37 @@ class ViewController: NSViewController {
             arduinoHandler.sendData(data: "0".data(using: String.Encoding.utf8)!)
         case .working:
             progressSpinner.startAnimation(nil)
-//            arduinoHandler.sendData(data: "2".data(using: String.Encoding.utf8)!)
+            //            arduinoHandler.sendData(data: "2".data(using: String.Encoding.utf8)!)
         }
     }
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-    
+
     @objc func fireVolumeTimer(_ notification: Notification) {
-//        updateState(to: .working)
+        //        updateState(to: .working)
         debugPrint("Firing off volume timer!")
-        
+
         if let status = notification.object as? DiskStatus {
             debugPrint("Status: \(status)")
-            
+
             switch status {
             case .arrive:
                 // when any arrival event occurred, it's an unsafe state
-                updateState(to: .unsafe)
+                updateStateTo(.unsafe)
             case .leave:
                 // because the timer can be called multiple times in a row, invalidate it each time
                 timer.invalidate()
-                timer = Timer.scheduledTimer(timeInterval: status.waitTime, target: self, selector: #selector(refreshVolumeStatus), userInfo: nil, repeats: false)
+                timer = Timer.scheduledTimer(
+                    timeInterval: status.waitTime,
+                    target: self,
+                    selector: #selector(refreshVolumeStatus),
+                    userInfo: nil,
+                    repeats: false
+                )
             }
         }
     }
@@ -126,4 +141,3 @@ enum EjectionState {
     case unsafe
     case working
 }
-

@@ -7,6 +7,7 @@ target 'SafeEject' do
 
   # Pods for SafeEject
   pod 'ORSSerialPort', '~> 2.1.0'
+  pod 'SwiftLint'
 
   target 'SafeEjectTests' do
     inherit! :search_paths
