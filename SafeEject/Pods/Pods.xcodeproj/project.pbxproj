@@ -1,0 +1,973 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		066EB072286FB37D73C9FAA60366C0A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63216C098C1946EC7C6368637209A5B /* Cocoa.framework */; };
+		0E4E1773BC03A343FFAE1076DFD56D33 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63216C098C1946EC7C6368637209A5B /* Cocoa.framework */; };
+		14929ACB6965507E4C1300DD67DBF4BC /* Pods-SafeEjectUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC80D77B8E68EDA988CBB04AEBA7974 /* Pods-SafeEjectUITests-dummy.m */; };
+		18BD735F66AD1D6D4D5CCF051A150102 /* ORSSerialRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7E75AA4D93A86C63173F0A8BD11709 /* ORSSerialRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C4EFE27EA0562F58B573914BFBCFA0B /* Pods-SafeEjectTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B42EA82CED8BCDA8F10425032FA0979 /* Pods-SafeEjectTests-dummy.m */; };
+		1CEC8233B1B948E8576506966C585034 /* ORSSerialRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EC705020EF926B6E3FC178B62051BF77 /* ORSSerialRequest.m */; };
+		26713142B93FB2591661E4C77D1ED945 /* ORSSerialBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA42D11E831C5E27ABE292855A71C4 /* ORSSerialBuffer.m */; };
+		3224F1A1544BA8183864ADEA824E1C43 /* ORSSerialPacketDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1FAEFAED3989A518C9EB314658A356 /* ORSSerialPacketDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC9307A22DA9C2E64407C353A0B57C5 /* ORSSerialBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8733E50BDAB320CC81F72B5352602114 /* ORSSerialBuffer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5CAFDD32C9BBB3F9F5139C441F7F13AB /* ORSSerialPort.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4ABBA9ED19B9CA9E5E148E53875ACB /* ORSSerialPort.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6100B68AE8E8C4CB4FB73645ADE13ECB /* Pods-SafeEject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98902471272AACBD7380692FDD5F0017 /* Pods-SafeEject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F65E5CE65B517A535AF16407D5CEF94 /* ORSSerialPortManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CA75D64229A1C6AACF25456C29511EB1 /* ORSSerialPortManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		738F96632356F50BAC9E43C796A634CC /* ORSSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 623A32564A940F888F1F11B236634E29 /* ORSSerialPort.m */; };
+		73A82C71C2653D58656616E6FA24A8AA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A88481FE7E6A728CEF855C25AAE5F2 /* IOKit.framework */; };
+		8CAB63B1AD77E8C44CBCA19CD7A75D22 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63216C098C1946EC7C6368637209A5B /* Cocoa.framework */; };
+		8E06E018C29C345D702F2815DD6F50FC /* Pods-SafeEject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D3FDAB15448972D6EED7C1C5FD4D2A /* Pods-SafeEject-dummy.m */; };
+		8EB3C655186C934ACE920AA8C631C133 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63216C098C1946EC7C6368637209A5B /* Cocoa.framework */; };
+		ABBC1D9EC6D83AD344CA51CA1E406047 /* Pods-SafeEjectUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E63D4751568889BA7510AD22AC26453D /* Pods-SafeEjectUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C910FC898D0A76AD187355EF558D671C /* ORSSerialPort-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7BAC89254021CB2F7057329987E488 /* ORSSerialPort-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1D6A7F2CC6A4475FE0975A8DDB3B3F8 /* ORSSerialPortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A90E83523A6517A53410969F4C3C6B4E /* ORSSerialPortManager.m */; };
+		F4FD905B35DA069A552599C0958EBFDB /* ORSSerialPort-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0FFF07056EDBD7CA7A7AB1AFFED417 /* ORSSerialPort-dummy.m */; };
+		F915FEA848F42344033480B040FA1A31 /* Pods-SafeEjectTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 894227D26EF8EF13498DEC338A00E5C1 /* Pods-SafeEjectTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FADAAA3F59E8503EDEF44810FD15E7BE /* ORSSerialPacketDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D5A9CFF482005341BD6ECEE0802650 /* ORSSerialPacketDescriptor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23F3C086A7E0F2A3EB66001351B1CD30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18ABAA2950D5B4418A5DBF7F07F33088;
+			remoteInfo = ORSSerialPort;
+		};
+		5A6F30A0CE3221397B6C0CDAA09E755C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B1792066C721D1A341005CB1DCFDFA0;
+			remoteInfo = "Pods-SafeEject";
+		};
+		AA54FCDBA6038CA2A2C998FBBD24DCFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B1792066C721D1A341005CB1DCFDFA0;
+			remoteInfo = "Pods-SafeEject";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02D3FDAB15448972D6EED7C1C5FD4D2A /* Pods-SafeEject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SafeEject-dummy.m"; sourceTree = "<group>"; };
+		065D2B4FD243E11DBCA0672D51E36DCE /* Pods_SafeEjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeEjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1FAEFAED3989A518C9EB314658A356 /* ORSSerialPacketDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ORSSerialPacketDescriptor.h; path = Source/ORSSerialPacketDescriptor.h; sourceTree = "<group>"; };
+		0C8BDECBC61E34C1F2C087247ACEC643 /* Pods_SafeEjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeEjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		109195750496A8F6888BAE75CABBF7BA /* Pods-SafeEjectUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeEjectUITests-Info.plist"; sourceTree = "<group>"; };
+		1F7E75AA4D93A86C63173F0A8BD11709 /* ORSSerialRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ORSSerialRequest.h; path = Source/ORSSerialRequest.h; sourceTree = "<group>"; };
+		2369824A15DEC10A697AB353D94F7003 /* ORSSerial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ORSSerial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D5A9CFF482005341BD6ECEE0802650 /* ORSSerialPacketDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ORSSerialPacketDescriptor.m; path = Source/ORSSerialPacketDescriptor.m; sourceTree = "<group>"; };
+		47A88481FE7E6A728CEF855C25AAE5F2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		4D0FFF07056EDBD7CA7A7AB1AFFED417 /* ORSSerialPort-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ORSSerialPort-dummy.m"; sourceTree = "<group>"; };
+		4E2534F596F55203775B1049993905D8 /* Pods-SafeEject-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeEject-Info.plist"; sourceTree = "<group>"; };
+		5078A5F0584A242700215D175FA86E3D /* Pods-SafeEjectTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeEjectTests-Info.plist"; sourceTree = "<group>"; };
+		53026596F22E2643E8841A9D2FC4A61E /* Pods-SafeEjectTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SafeEjectTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A8F27B63C51A83034EF4D5AEEE9F473 /* ORSSerialPort-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ORSSerialPort-Info.plist"; sourceTree = "<group>"; };
+		5C10634D046993FCB01A1E8995898EEC /* Pods-SafeEjectUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeEjectUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5C50194E668256972CA3E55BFA056E13 /* Pods-SafeEjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeEjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6168192DDCB7257B93D250E9BEDE7201 /* Pods-SafeEjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeEjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		623A32564A940F888F1F11B236634E29 /* ORSSerialPort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ORSSerialPort.m; path = Source/ORSSerialPort.m; sourceTree = "<group>"; };
+		6AA0D98CE7818C49DE35B8059C44F581 /* Pods-SafeEjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeEjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C4ABBA9ED19B9CA9E5E148E53875ACB /* ORSSerialPort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ORSSerialPort.h; path = Source/ORSSerialPort.h; sourceTree = "<group>"; };
+		6CC80D77B8E68EDA988CBB04AEBA7974 /* Pods-SafeEjectUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SafeEjectUITests-dummy.m"; sourceTree = "<group>"; };
+		6F234BA4AFB1AC4FAACCC448107FFF6F /* Pods-SafeEject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SafeEject-frameworks.sh"; sourceTree = "<group>"; };
+		72D8E81DC1D991BBD95A5AAD88BA271E /* Pods-SafeEject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SafeEject.modulemap"; sourceTree = "<group>"; };
+		7E2732BD58BE5D020AFEC1F24BC58481 /* Pods-SafeEjectUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SafeEjectUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		81E27427F152C9E1E751EE1A0D8070F6 /* ORSSerialPort.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ORSSerialPort.xcconfig; sourceTree = "<group>"; };
+		8733E50BDAB320CC81F72B5352602114 /* ORSSerialBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ORSSerialBuffer.h; path = Source/ORSSerialBuffer.h; sourceTree = "<group>"; };
+		87EBDA4FCA7565D16634A4E6FFD12805 /* Pods-SafeEjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeEjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		894227D26EF8EF13498DEC338A00E5C1 /* Pods-SafeEjectTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SafeEjectTests-umbrella.h"; sourceTree = "<group>"; };
+		8D59C19597CAA29F3B6345A1F55034E1 /* Pods-SafeEjectTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SafeEjectTests.modulemap"; sourceTree = "<group>"; };
+		98902471272AACBD7380692FDD5F0017 /* Pods-SafeEject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SafeEject-umbrella.h"; sourceTree = "<group>"; };
+		9B42EA82CED8BCDA8F10425032FA0979 /* Pods-SafeEjectTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SafeEjectTests-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7B1A4206F791A7335C2BA987C04EBF6 /* Pods-SafeEject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeEject-acknowledgements.plist"; sourceTree = "<group>"; };
+		A90E83523A6517A53410969F4C3C6B4E /* ORSSerialPortManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ORSSerialPortManager.m; path = Source/ORSSerialPortManager.m; sourceTree = "<group>"; };
+		AA70675B82430A7818A33F9C9F73F5C0 /* Pods-SafeEjectUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SafeEjectUITests.modulemap"; sourceTree = "<group>"; };
+		B5299B7C9CBBD8A1CDA94F7D8F7240DA /* Pods-SafeEjectTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeEjectTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CA75D64229A1C6AACF25456C29511EB1 /* ORSSerialPortManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ORSSerialPortManager.h; path = Source/ORSSerialPortManager.h; sourceTree = "<group>"; };
+		CCCA42D11E831C5E27ABE292855A71C4 /* ORSSerialBuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ORSSerialBuffer.m; path = Source/ORSSerialBuffer.m; sourceTree = "<group>"; };
+		D63216C098C1946EC7C6368637209A5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E14E1C2C125950422CFF64D0FCB784CC /* Pods-SafeEject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeEject.debug.xcconfig"; sourceTree = "<group>"; };
+		E2B657F1DCB4FF9839A5A8C46C0A9208 /* ORSSerialPort.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ORSSerialPort.modulemap; sourceTree = "<group>"; };
+		E63D4751568889BA7510AD22AC26453D /* Pods-SafeEjectUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SafeEjectUITests-umbrella.h"; sourceTree = "<group>"; };
+		EA3273FC0E8FFFAF8E2695E23EC6C804 /* ORSSerialPort-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORSSerialPort-prefix.pch"; sourceTree = "<group>"; };
+		EC705020EF926B6E3FC178B62051BF77 /* ORSSerialRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ORSSerialRequest.m; path = Source/ORSSerialRequest.m; sourceTree = "<group>"; };
+		F5747D22518586FB7CF4F360005EECC1 /* Pods_SafeEject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeEject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73415C3B23EABCECC53FA87819FE3C0 /* Pods-SafeEject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeEject.release.xcconfig"; sourceTree = "<group>"; };
+		FA709AE1E00E172B90C18CD6605C9833 /* Pods-SafeEject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SafeEject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FE7BAC89254021CB2F7057329987E488 /* ORSSerialPort-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORSSerialPort-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D5C8CD1F7AFF06E536F834EB076E7BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB3C655186C934ACE920AA8C631C133 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CBDFEAA1F46124A703E9AD11D2B993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CAB63B1AD77E8C44CBCA19CD7A75D22 /* Cocoa.framework in Frameworks */,
+				73A82C71C2653D58656616E6FA24A8AA /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61A01996DB22E016B68681264B4F2D62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				066EB072286FB37D73C9FAA60366C0A0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD4B3758B3E00CFA16A051461BF5C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E4E1773BC03A343FFAE1076DFD56D33 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12B72E8DE764B4BFC38CBA68589A367C /* Pods-SafeEjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D59C19597CAA29F3B6345A1F55034E1 /* Pods-SafeEjectTests.modulemap */,
+				53026596F22E2643E8841A9D2FC4A61E /* Pods-SafeEjectTests-acknowledgements.markdown */,
+				B5299B7C9CBBD8A1CDA94F7D8F7240DA /* Pods-SafeEjectTests-acknowledgements.plist */,
+				9B42EA82CED8BCDA8F10425032FA0979 /* Pods-SafeEjectTests-dummy.m */,
+				5078A5F0584A242700215D175FA86E3D /* Pods-SafeEjectTests-Info.plist */,
+				894227D26EF8EF13498DEC338A00E5C1 /* Pods-SafeEjectTests-umbrella.h */,
+				6AA0D98CE7818C49DE35B8059C44F581 /* Pods-SafeEjectTests.debug.xcconfig */,
+				6168192DDCB7257B93D250E9BEDE7201 /* Pods-SafeEjectTests.release.xcconfig */,
+			);
+			name = "Pods-SafeEjectTests";
+			path = "Target Support Files/Pods-SafeEjectTests";
+			sourceTree = "<group>";
+		};
+		2343C9427F13F91F787BC6045A93C030 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				D63216C098C1946EC7C6368637209A5B /* Cocoa.framework */,
+				47A88481FE7E6A728CEF855C25AAE5F2 /* IOKit.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		53E9736AC25DC7724073340F48A1D8B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2369824A15DEC10A697AB353D94F7003 /* ORSSerial.framework */,
+				F5747D22518586FB7CF4F360005EECC1 /* Pods_SafeEject.framework */,
+				0C8BDECBC61E34C1F2C087247ACEC643 /* Pods_SafeEjectTests.framework */,
+				065D2B4FD243E11DBCA0672D51E36DCE /* Pods_SafeEjectUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F1557F5B50027BB54DB0FD83BCDF7C8 /* Pods-SafeEject */ = {
+			isa = PBXGroup;
+			children = (
+				72D8E81DC1D991BBD95A5AAD88BA271E /* Pods-SafeEject.modulemap */,
+				FA709AE1E00E172B90C18CD6605C9833 /* Pods-SafeEject-acknowledgements.markdown */,
+				A7B1A4206F791A7335C2BA987C04EBF6 /* Pods-SafeEject-acknowledgements.plist */,
+				02D3FDAB15448972D6EED7C1C5FD4D2A /* Pods-SafeEject-dummy.m */,
+				6F234BA4AFB1AC4FAACCC448107FFF6F /* Pods-SafeEject-frameworks.sh */,
+				4E2534F596F55203775B1049993905D8 /* Pods-SafeEject-Info.plist */,
+				98902471272AACBD7380692FDD5F0017 /* Pods-SafeEject-umbrella.h */,
+				E14E1C2C125950422CFF64D0FCB784CC /* Pods-SafeEject.debug.xcconfig */,
+				F73415C3B23EABCECC53FA87819FE3C0 /* Pods-SafeEject.release.xcconfig */,
+			);
+			name = "Pods-SafeEject";
+			path = "Target Support Files/Pods-SafeEject";
+			sourceTree = "<group>";
+		};
+		A98312F0953A6E1E0DB228E031C37D9B /* Pods-SafeEjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA70675B82430A7818A33F9C9F73F5C0 /* Pods-SafeEjectUITests.modulemap */,
+				7E2732BD58BE5D020AFEC1F24BC58481 /* Pods-SafeEjectUITests-acknowledgements.markdown */,
+				5C10634D046993FCB01A1E8995898EEC /* Pods-SafeEjectUITests-acknowledgements.plist */,
+				6CC80D77B8E68EDA988CBB04AEBA7974 /* Pods-SafeEjectUITests-dummy.m */,
+				109195750496A8F6888BAE75CABBF7BA /* Pods-SafeEjectUITests-Info.plist */,
+				E63D4751568889BA7510AD22AC26453D /* Pods-SafeEjectUITests-umbrella.h */,
+				5C50194E668256972CA3E55BFA056E13 /* Pods-SafeEjectUITests.debug.xcconfig */,
+				87EBDA4FCA7565D16634A4E6FFD12805 /* Pods-SafeEjectUITests.release.xcconfig */,
+			);
+			name = "Pods-SafeEjectUITests";
+			path = "Target Support Files/Pods-SafeEjectUITests";
+			sourceTree = "<group>";
+		};
+		AD61CEADD221DC92C843084115EE71DD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F1557F5B50027BB54DB0FD83BCDF7C8 /* Pods-SafeEject */,
+				12B72E8DE764B4BFC38CBA68589A367C /* Pods-SafeEjectTests */,
+				A98312F0953A6E1E0DB228E031C37D9B /* Pods-SafeEjectUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AE2279384C660246397EF1FAA7DC218D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD91B03DF030CDACD3FA9093FB563B29 /* ORSSerialPort */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2343C9427F13F91F787BC6045A93C030 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD91B03DF030CDACD3FA9093FB563B29 /* ORSSerialPort */ = {
+			isa = PBXGroup;
+			children = (
+				8733E50BDAB320CC81F72B5352602114 /* ORSSerialBuffer.h */,
+				CCCA42D11E831C5E27ABE292855A71C4 /* ORSSerialBuffer.m */,
+				0A1FAEFAED3989A518C9EB314658A356 /* ORSSerialPacketDescriptor.h */,
+				29D5A9CFF482005341BD6ECEE0802650 /* ORSSerialPacketDescriptor.m */,
+				6C4ABBA9ED19B9CA9E5E148E53875ACB /* ORSSerialPort.h */,
+				623A32564A940F888F1F11B236634E29 /* ORSSerialPort.m */,
+				CA75D64229A1C6AACF25456C29511EB1 /* ORSSerialPortManager.h */,
+				A90E83523A6517A53410969F4C3C6B4E /* ORSSerialPortManager.m */,
+				1F7E75AA4D93A86C63173F0A8BD11709 /* ORSSerialRequest.h */,
+				EC705020EF926B6E3FC178B62051BF77 /* ORSSerialRequest.m */,
+				F17F1AE48CACD66D2AFDB76AD99B3A52 /* Support Files */,
+			);
+			path = ORSSerialPort;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */,
+				AE2279384C660246397EF1FAA7DC218D /* Pods */,
+				53E9736AC25DC7724073340F48A1D8B0 /* Products */,
+				AD61CEADD221DC92C843084115EE71DD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		F17F1AE48CACD66D2AFDB76AD99B3A52 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2B657F1DCB4FF9839A5A8C46C0A9208 /* ORSSerialPort.modulemap */,
+				81E27427F152C9E1E751EE1A0D8070F6 /* ORSSerialPort.xcconfig */,
+				4D0FFF07056EDBD7CA7A7AB1AFFED417 /* ORSSerialPort-dummy.m */,
+				5A8F27B63C51A83034EF4D5AEEE9F473 /* ORSSerialPort-Info.plist */,
+				EA3273FC0E8FFFAF8E2695E23EC6C804 /* ORSSerialPort-prefix.pch */,
+				FE7BAC89254021CB2F7057329987E488 /* ORSSerialPort-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ORSSerialPort";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AF95ACF0C9BD39F0EFEF3B3EBDC6561 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6100B68AE8E8C4CB4FB73645ADE13ECB /* Pods-SafeEject-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5678D6A54DB43DEADF002F3999003B58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC9307A22DA9C2E64407C353A0B57C5 /* ORSSerialBuffer.h in Headers */,
+				3224F1A1544BA8183864ADEA824E1C43 /* ORSSerialPacketDescriptor.h in Headers */,
+				C910FC898D0A76AD187355EF558D671C /* ORSSerialPort-umbrella.h in Headers */,
+				5CAFDD32C9BBB3F9F5139C441F7F13AB /* ORSSerialPort.h in Headers */,
+				6F65E5CE65B517A535AF16407D5CEF94 /* ORSSerialPortManager.h in Headers */,
+				18BD735F66AD1D6D4D5CCF051A150102 /* ORSSerialRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE86611EDDC554C9D99AE4BD70C5565 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F915FEA848F42344033480B040FA1A31 /* Pods-SafeEjectTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FBF3957C03291775838161A2B622E22 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABBC1D9EC6D83AD344CA51CA1E406047 /* Pods-SafeEjectUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		18ABAA2950D5B4418A5DBF7F07F33088 /* ORSSerialPort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D6100166B2329198E230852CF974763 /* Build configuration list for PBXNativeTarget "ORSSerialPort" */;
+			buildPhases = (
+				5678D6A54DB43DEADF002F3999003B58 /* Headers */,
+				D141FEE00FA40AA041B99DF6DEF11276 /* Sources */,
+				19CBDFEAA1F46124A703E9AD11D2B993 /* Frameworks */,
+				35D5EA5A88F4BE32D029E41FF4932D3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ORSSerialPort;
+			productName = ORSSerialPort;
+			productReference = 2369824A15DEC10A697AB353D94F7003 /* ORSSerial.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4B1792066C721D1A341005CB1DCFDFA0 /* Pods-SafeEject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7EE1864AF7F7E8C874118A21E81BAE2 /* Build configuration list for PBXNativeTarget "Pods-SafeEject" */;
+			buildPhases = (
+				0AF95ACF0C9BD39F0EFEF3B3EBDC6561 /* Headers */,
+				5AFA31DF0B3843A5D72DDC4FD2E2DE72 /* Sources */,
+				A7FD4B3758B3E00CFA16A051461BF5C9 /* Frameworks */,
+				0D5F6A6F9BB0A57FB4EF9E34D5135888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03769327D43611DFB16F7629FB8B4AA7 /* PBXTargetDependency */,
+			);
+			name = "Pods-SafeEject";
+			productName = "Pods-SafeEject";
+			productReference = F5747D22518586FB7CF4F360005EECC1 /* Pods_SafeEject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5E16FDAAAD1A8D9B0DD5575BF1261847 /* Pods-SafeEjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 936AAE41E931ACD14E9628D21EDFE2F2 /* Build configuration list for PBXNativeTarget "Pods-SafeEjectUITests" */;
+			buildPhases = (
+				6FBF3957C03291775838161A2B622E22 /* Headers */,
+				E891391DD26848F9EBFD44963BD33F45 /* Sources */,
+				61A01996DB22E016B68681264B4F2D62 /* Frameworks */,
+				ACFDC8EF2857102E50320405ED6D786F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				711F2CFB99EC9CC0560C24951D11FF82 /* PBXTargetDependency */,
+			);
+			name = "Pods-SafeEjectUITests";
+			productName = "Pods-SafeEjectUITests";
+			productReference = 065D2B4FD243E11DBCA0672D51E36DCE /* Pods_SafeEjectUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A31E6511CB58C0149FFA4841F8CBDEBC /* Pods-SafeEjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F25E011FF7DE15B6983EFC62607E2BE /* Build configuration list for PBXNativeTarget "Pods-SafeEjectTests" */;
+			buildPhases = (
+				6AE86611EDDC554C9D99AE4BD70C5565 /* Headers */,
+				FBEFFDCD230A74E8E3C47D48FDE840F0 /* Sources */,
+				0D5C8CD1F7AFF06E536F834EB076E7BF /* Frameworks */,
+				F3E55C1CACAC3B74DC67169D889E1775 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01F555CDA25D3EAA5D691FDFC4AF1FA5 /* PBXTargetDependency */,
+			);
+			name = "Pods-SafeEjectTests";
+			productName = "Pods-SafeEjectTests";
+			productReference = 0C8BDECBC61E34C1F2C087247ACEC643 /* Pods_SafeEjectTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 53E9736AC25DC7724073340F48A1D8B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18ABAA2950D5B4418A5DBF7F07F33088 /* ORSSerialPort */,
+				4B1792066C721D1A341005CB1DCFDFA0 /* Pods-SafeEject */,
+				A31E6511CB58C0149FFA4841F8CBDEBC /* Pods-SafeEjectTests */,
+				5E16FDAAAD1A8D9B0DD5575BF1261847 /* Pods-SafeEjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D5F6A6F9BB0A57FB4EF9E34D5135888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35D5EA5A88F4BE32D029E41FF4932D3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFDC8EF2857102E50320405ED6D786F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3E55C1CACAC3B74DC67169D889E1775 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AFA31DF0B3843A5D72DDC4FD2E2DE72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E06E018C29C345D702F2815DD6F50FC /* Pods-SafeEject-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D141FEE00FA40AA041B99DF6DEF11276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26713142B93FB2591661E4C77D1ED945 /* ORSSerialBuffer.m in Sources */,
+				FADAAA3F59E8503EDEF44810FD15E7BE /* ORSSerialPacketDescriptor.m in Sources */,
+				F4FD905B35DA069A552599C0958EBFDB /* ORSSerialPort-dummy.m in Sources */,
+				738F96632356F50BAC9E43C796A634CC /* ORSSerialPort.m in Sources */,
+				F1D6A7F2CC6A4475FE0975A8DDB3B3F8 /* ORSSerialPortManager.m in Sources */,
+				1CEC8233B1B948E8576506966C585034 /* ORSSerialRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E891391DD26848F9EBFD44963BD33F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14929ACB6965507E4C1300DD67DBF4BC /* Pods-SafeEjectUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBEFFDCD230A74E8E3C47D48FDE840F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C4EFE27EA0562F58B573914BFBCFA0B /* Pods-SafeEjectTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01F555CDA25D3EAA5D691FDFC4AF1FA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SafeEject";
+			target = 4B1792066C721D1A341005CB1DCFDFA0 /* Pods-SafeEject */;
+			targetProxy = AA54FCDBA6038CA2A2C998FBBD24DCFB /* PBXContainerItemProxy */;
+		};
+		03769327D43611DFB16F7629FB8B4AA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ORSSerialPort;
+			target = 18ABAA2950D5B4418A5DBF7F07F33088 /* ORSSerialPort */;
+			targetProxy = 23F3C086A7E0F2A3EB66001351B1CD30 /* PBXContainerItemProxy */;
+		};
+		711F2CFB99EC9CC0560C24951D11FF82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SafeEject";
+			target = 4B1792066C721D1A341005CB1DCFDFA0 /* Pods-SafeEject */;
+			targetProxy = 5A6F30A0CE3221397B6C0CDAA09E755C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		11F96B0236C17D24137E89AA530DB078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C50194E668256972CA3E55BFA056E13 /* Pods-SafeEjectUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafeEjectUITests/Pods-SafeEjectUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafeEjectUITests/Pods-SafeEjectUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1D2D265A5CDB6EB66AEE5397C93102CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F73415C3B23EABCECC53FA87819FE3C0 /* Pods-SafeEject.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafeEject/Pods-SafeEject-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafeEject/Pods-SafeEject.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		28F35F9609647243F83D59928C1FC195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E14E1C2C125950422CFF64D0FCB784CC /* Pods-SafeEject.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafeEject/Pods-SafeEject-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafeEject/Pods-SafeEject.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2AE0D8B39827576460938522CAB2F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7A3998C5ED7A7E4243A2C5B8A750F97A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81E27427F152C9E1E751EE1A0D8070F6 /* ORSSerialPort.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/ORSSerialPort/ORSSerialPort-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ORSSerialPort/ORSSerialPort-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MODULEMAP_FILE = "Target Support Files/ORSSerialPort/ORSSerialPort.modulemap";
+				PRODUCT_MODULE_NAME = ORSSerial;
+				PRODUCT_NAME = ORSSerial;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8110517E217891167538C5EB19189FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87EBDA4FCA7565D16634A4E6FFD12805 /* Pods-SafeEjectUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafeEjectUITests/Pods-SafeEjectUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafeEjectUITests/Pods-SafeEjectUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		816C679D58750316935F7386A438309D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AD63E3CF862CF63C9BCF10272B000B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AA0D98CE7818C49DE35B8059C44F581 /* Pods-SafeEjectTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafeEjectTests/Pods-SafeEjectTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafeEjectTests/Pods-SafeEjectTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CAF8517432C7B16BD7476BB15C05EC37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6168192DDCB7257B93D250E9BEDE7201 /* Pods-SafeEjectTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafeEjectTests/Pods-SafeEjectTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafeEjectTests/Pods-SafeEjectTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD1FF86EC0F13E535E6EFA7AD93035C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81E27427F152C9E1E751EE1A0D8070F6 /* ORSSerialPort.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/ORSSerialPort/ORSSerialPort-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ORSSerialPort/ORSSerialPort-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MODULEMAP_FILE = "Target Support Files/ORSSerialPort/ORSSerialPort.modulemap";
+				PRODUCT_MODULE_NAME = ORSSerial;
+				PRODUCT_NAME = ORSSerial;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F25E011FF7DE15B6983EFC62607E2BE /* Build configuration list for PBXNativeTarget "Pods-SafeEjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD63E3CF862CF63C9BCF10272B000B5A /* Debug */,
+				CAF8517432C7B16BD7476BB15C05EC37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				816C679D58750316935F7386A438309D /* Debug */,
+				2AE0D8B39827576460938522CAB2F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D6100166B2329198E230852CF974763 /* Build configuration list for PBXNativeTarget "ORSSerialPort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1FF86EC0F13E535E6EFA7AD93035C4 /* Debug */,
+				7A3998C5ED7A7E4243A2C5B8A750F97A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		936AAE41E931ACD14E9628D21EDFE2F2 /* Build configuration list for PBXNativeTarget "Pods-SafeEjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11F96B0236C17D24137E89AA530DB078 /* Debug */,
+				8110517E217891167538C5EB19189FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7EE1864AF7F7E8C874118A21E81BAE2 /* Build configuration list for PBXNativeTarget "Pods-SafeEject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F35F9609647243F83D59928C1FC195 /* Debug */,
+				1D2D265A5CDB6EB66AEE5397C93102CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

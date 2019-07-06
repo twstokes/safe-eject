@@ -1,0 +1,6 @@
+framework module Pods_SafeEjectUITests {
+  umbrella header "Pods-SafeEjectUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

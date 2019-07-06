@@ -45,10 +45,11 @@ class ArduinoHandler: NSObject, ORSSerialPortDelegate {
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didReceive data: Data) {
+        debugPrint("Data received")
         ejectCallback()
     }
-    
-    func serialPortWasRemoved(fromSystem serialPort: ORSSerialPort) {
+
+    func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {
         self.serialPort = nil
     }
     

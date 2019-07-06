@@ -42,7 +42,8 @@ class ViewController: NSViewController {
         updateState(to: .working)
         
         arduinoHandler.registerEjectCallback {
-            self.ejectAll()
+//            self.ejectAll()
+            debugPrint("Arduino message received!")
         }
         
         // refreshVolumeStatus is finishing before this is ready, so initial state is never set
@@ -70,7 +71,7 @@ class ViewController: NSViewController {
         arduinoHandler.close()
     }
     
-    func refreshVolumeStatus() {
+    @objc func refreshVolumeStatus() {
         if let volumeCount = diskHandler?.getMountedVolumes().count, volumeCount == 0 {
             updateState(to: .safe)
         } else {
@@ -100,7 +101,7 @@ class ViewController: NSViewController {
         }
     }
     
-    func fireVolumeTimer(_ notification: Notification) {
+    @objc func fireVolumeTimer(_ notification: Notification) {
 //        updateState(to: .working)
         debugPrint("Firing off volume timer!")
         
